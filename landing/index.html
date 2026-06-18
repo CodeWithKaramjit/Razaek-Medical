@@ -1,0 +1,609 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Razaek — Premium Medical Tourism Platform</title>
+    
+    <!-- Meta tags for SEO -->
+    <meta name="description" content="Razaek coordinates high-quality, affordable medical treatments in India, combining world-class healthcare with premium travel and recovery concierge services.">
+    <meta name="keywords" content="Medical Tourism, Healthcare in India, Affordable Surgery, Cardiology Bypass, Knee Replacement India, IVF Treatment India">
+    
+    <!-- Style Sheets -->
+    <link rel="stylesheet" href="style.css">
+    
+    <!-- FontAwesome & Google Icons -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+</head>
+<body>
+
+    <!-- ==========================================================================
+       Navigation Bar
+       ========================================================================== -->
+    <nav class="navbar" id="navbar">
+        <a href="#home" class="logo">
+            <div class="logo-icon">
+                <i class="fas fa-heartbeat"></i>
+            </div>
+            Razaek <span>Medical</span>
+        </a>
+        <div class="nav-links" id="nav-links">
+            <a href="#home" class="active">Home</a>
+            <a href="#treatments">Treatments</a>
+            <a href="#calculator">Savings Calculator</a>
+            <a href="#journey">Concierge Journey</a>
+            <a href="#testimonials">Patient Stories</a>
+            <a href="#contact" class="btn btn-primary" style="padding: 10px 20px; font-size: 0.85rem;">Get a Free Quote</a>
+        </div>
+        <div class="nav-actions">
+            <button class="theme-toggle" id="theme-btn" aria-label="Toggle Theme">
+                <i class="fas fa-sun"></i>
+            </button>
+            <div class="burger" id="burger-menu">
+                <div class="line1"></div>
+                <div class="line2"></div>
+                <div class="line3"></div>
+            </div>
+        </div>
+    </nav>
+
+    <!-- ==========================================================================
+       Hero Section
+       ========================================================================== -->
+    <section id="home" class="hero">
+        <div class="hero-container">
+            <div class="hero-content">
+                <span class="accent-tag">End-to-End Concierge Care</span>
+                <h1>World-Class Healthcare. <br>Exceptional Savings.</h1>
+                <p>Access JCI-accredited hospitals and leading medical specialists in India. Save up to 70% on major surgical procedures, accompanied by VIP travel and recovery services.</p>
+                <div class="hero-buttons">
+                    <a href="#contact" class="btn btn-primary">Start Consultation <i class="fas fa-calendar-check"></i></a>
+                    <a href="#calculator" class="btn btn-secondary">Calculate Savings <i class="fas fa-calculator"></i></a>
+                </div>
+                <div class="hero-trust">
+                    <div class="trust-item">
+                        <span class="trust-num">70%</span>
+                        <span class="trust-lbl">Avg. Cost Savings</span>
+                    </div>
+                    <div class="trust-item">
+                        <span class="trust-num">150+</span>
+                        <span class="trust-lbl">Partner Hospitals</span>
+                    </div>
+                    <div class="trust-item">
+                        <span class="trust-num">JCI</span>
+                        <span class="trust-lbl">Accredited Quality</span>
+                    </div>
+                </div>
+            </div>
+            <div class="hero-image-wrapper">
+                <div class="hero-image-glow"></div>
+                <div class="hero-image">
+                    <!-- High-quality clinical background -->
+                    <img src="https://images.unsplash.com/photo-1519494026892-80bbd2d6fd0d?auto=format&fit=crop&q=80&w=1000" alt="Razaek Modern Clinical Concierge Lounge">
+                    <div class="floating-badge glass-card">
+                        <i class="fas fa-shield-halved"></i>
+                        <div class="badge-text">
+                            <h4>99.2% Success</h4>
+                            <p>Premium Clinical Care</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- ==========================================================================
+       Stats Counter Grid Section
+       ========================================================================== -->
+    <section id="stats" class="section-padding" style="background: rgba(12, 110, 98, 0.03);">
+        <div style="max-width: 1100px; margin: 0 auto; display: grid; grid-template-columns: repeat(auto-fit, minmax(220px, 1fr)); gap: 30px; text-align: center;">
+            <div class="glass-card" style="padding: 40px 20px;">
+                <i class="fas fa-user-md" style="font-size: 2.5rem; color: var(--secondary); margin-bottom: 20px;"></i>
+                <h3 style="font-size: 2.2rem; font-weight: 700; margin-bottom: 5px;">500+</h3>
+                <p style="color: var(--text-muted-light); font-size: 0.95rem;">Expert Specialists</p>
+            </div>
+            <div class="glass-card" style="padding: 40px 20px;">
+                <i class="fas fa-hospital-user" style="font-size: 2.5rem; color: var(--secondary); margin-bottom: 20px;"></i>
+                <h3 style="font-size: 2.2rem; font-weight: 700; margin-bottom: 5px;">5,000+</h3>
+                <p style="color: var(--text-muted-light); font-size: 0.95rem;">International Patients Served</p>
+            </div>
+            <div class="glass-card" style="padding: 40px 20px;">
+                <i class="fas fa-plane-departure" style="font-size: 2.5rem; color: var(--secondary); margin-bottom: 20px;"></i>
+                <h3 style="font-size: 2.2rem; font-weight: 700; margin-bottom: 5px;">100%</h3>
+                <p style="color: var(--text-muted-light); font-size: 0.95rem;">VIP Travel Logistics Handled</p>
+            </div>
+            <div class="glass-card" style="padding: 40px 20px;">
+                <i class="fas fa-hand-holding-dollar" style="font-size: 2.5rem; color: var(--secondary); margin-bottom: 20px;"></i>
+                <h3 style="font-size: 2.2rem; font-weight: 700; margin-bottom: 5px;">$45M+</h3>
+                <p style="color: var(--text-muted-light); font-size: 0.95rem;">Patient Treatment Savings</p>
+            </div>
+        </div>
+    </section>
+
+    <!-- ==========================================================================
+       Treatments & Specialty Packages
+       ========================================================================== -->
+    <section id="treatments" class="section-padding">
+        <div class="section-header">
+            <span class="accent-tag">Clinical Excellence</span>
+            <h2>Our Specialized Medical Packages</h2>
+            <p>We partner only with JCI-accredited super-specialty hospitals in India, offering cutting-edge treatments with top-rated medical expertise.</p>
+        </div>
+        <div class="packages-grid">
+            <!-- Cardiology -->
+            <div class="glass-card package-card">
+                <div class="package-icon">
+                    <i class="fas fa-heart-pulse"></i>
+                </div>
+                <h3>Cardiology & Bypass</h3>
+                <p>Advanced cardiac surgery including minimally invasive coronary bypass (CABG), valve replacements, and complex pediatric heart surgeries.</p>
+                <ul class="package-highlights">
+                    <li><i class="fas fa-check-circle"></i> JCI Accredited Cath Labs</li>
+                    <li><i class="fas fa-check-circle"></i> Robotic Cardiac Surgery</li>
+                    <li><i class="fas fa-check-circle"></i> 21-Day Post-Care Stay</li>
+                </ul>
+                <a href="#contact" class="package-link">Request Consultation <i class="fas fa-arrow-right"></i></a>
+            </div>
+            <!-- Orthopedics -->
+            <div class="glass-card package-card">
+                <div class="package-icon">
+                    <i class="fas fa-bone"></i>
+                </div>
+                <h3>Joint & Orthopedics</h3>
+                <p>High-precision total knee and hip replacements using robotic surgical systems for minimal recovery downtime and maximum comfort.</p>
+                <ul class="package-highlights">
+                    <li><i class="fas fa-check-circle"></i> Computer-assisted navigation</li>
+                    <li><i class="fas fa-check-circle"></i> Certified rehab specialists</li>
+                    <li><i class="fas fa-check-circle"></i> FDA-approved implant joints</li>
+                </ul>
+                <a href="#contact" class="package-link">Request Consultation <i class="fas fa-arrow-right"></i></a>
+            </div>
+            <!-- Oncology -->
+            <div class="glass-card package-card">
+                <div class="package-icon">
+                    <i class="fas fa-dna"></i>
+                </div>
+                <h3>Oncology (Cancer)</h3>
+                <p>Comprehensive cancer treatments incorporating immunotherapy, proton beam therapy, targeted radiation, and expert surgical oncology.</p>
+                <ul class="package-highlights">
+                    <li><i class="fas fa-check-circle"></i> CyberKnife & Proton Systems</li>
+                    <li><i class="fas fa-check-circle"></i> Integrated Tumor Board reviews</li>
+                    <li><i class="fas fa-check-circle"></i> Personalized medicine paths</li>
+                </ul>
+                <a href="#contact" class="package-link">Request Consultation <i class="fas fa-arrow-right"></i></a>
+            </div>
+            <!-- IVF -->
+            <div class="glass-card package-card">
+                <div class="package-icon">
+                    <i class="fas fa-baby"></i>
+                </div>
+                <h3>IVF & Fertility</h3>
+                <p>Empathetic, highly successful fertility treatments including ICSI, egg donor programs, and pre-implantation genetic testing (PGT).</p>
+                <ul class="package-highlights">
+                    <li><i class="fas fa-check-circle"></i> Advanced embryology laboratories</li>
+                    <li><i class="fas fa-check-circle"></i> High cycle success rates</li>
+                    <li><i class="fas fa-check-circle"></i> Complete confidential support</li>
+                </ul>
+                <a href="#contact" class="package-link">Request Consultation <i class="fas fa-arrow-right"></i></a>
+            </div>
+            <!-- Bariatric -->
+            <div class="glass-card package-card">
+                <div class="package-icon">
+                    <i class="fas fa-weight-scale"></i>
+                </div>
+                <h3>Bariatric Surgery</h3>
+                <p>Advanced, minimally invasive gastric bypass, sleeve gastrectomy, and medical weight management directed by clinical specialists.</p>
+                <ul class="package-highlights">
+                    <li><i class="fas fa-check-circle"></i> Keyhole laparoscopic care</li>
+                    <li><i class="fas fa-check-circle"></i> Structured diet support</li>
+                    <li><i class="fas fa-check-circle"></i> Rapid recovery protocol</li>
+                </ul>
+                <a href="#contact" class="package-link">Request Consultation <i class="fas fa-arrow-right"></i></a>
+            </div>
+            <!-- Wellness -->
+            <div class="glass-card package-card">
+                <div class="package-icon">
+                    <i class="fas fa-spa"></i>
+                </div>
+                <h3>Ayurveda & Wellness</h3>
+                <p>Traditional, authentic rejuvenation programs in luxury wellness retreats, focusing on holistic healing, detox, and chronic ailment recovery.</p>
+                <ul class="package-highlights">
+                    <li><i class="fas fa-check-circle"></i> Certified Ayurvedic doctors</li>
+                    <li><i class="fas fa-check-circle"></i> Panchakarma detox programs</li>
+                    <li><i class="fas fa-check-circle"></i> Yoga & meditation sessions</li>
+                </ul>
+                <a href="#contact" class="package-link">Request Consultation <i class="fas fa-arrow-right"></i></a>
+            </div>
+        </div>
+    </section>
+
+    <!-- ==========================================================================
+       Cost Estimator & Calculator Section
+       ========================================================================== -->
+    <section id="calculator" class="section-padding estimator">
+        <div class="section-header">
+            <span class="accent-tag">Savings Calculator</span>
+            <h2>Estimate Your Surgical Savings</h2>
+            <p>Compare treatment costs between the United States/United Kingdom and our JCI-accredited partner hospital networks in India.</p>
+        </div>
+        
+        <div class="calculator-wrapper glass-card">
+            <div class="calc-selector">
+                <div class="form-group">
+                    <label for="treatment-select">Select Medical Treatment</label>
+                    <select id="treatment-select" class="form-select">
+                        <option value="cardiology">Cardiology (Heart Bypass / CABG)</option>
+                        <option value="orthopedics">Orthopedics (Total Knee Replacement)</option>
+                        <option value="oncology">Oncology (Complex Tumor Surgery)</option>
+                        <option value="ivf">IVF & Fertility Treatment Cycle</option>
+                        <option value="bariatric">Bariatric (Gastric Bypass Surgery)</option>
+                        <option value="wellness">Wellness (Ayurvedic Rejuvenation)</option>
+                    </select>
+                </div>
+                <div class="form-group">
+                    <label for="companion-select">Are you traveling with a companion?</label>
+                    <select id="companion-select" class="form-select">
+                        <option value="no">No, traveling solo</option>
+                        <option value="yes">Yes, traveling with a companion (Includes travel/stay cost)</option>
+                    </select>
+                </div>
+            </div>
+
+            <div class="cost-display-grid">
+                <div class="cost-card glass-card us">
+                    <h4>Estimated US/UK Cost</h4>
+                    <div class="cost-amount" id="us-cost">$120,000</div>
+                </div>
+                <div class="cost-card glass-card india">
+                    <h4>Razaek India Package</h4>
+                    <div class="cost-amount" id="india-cost">$8,500</div>
+                </div>
+                <div class="cost-card glass-card saving">
+                    <h4>Your Estimated Savings</h4>
+                    <div class="cost-amount" id="saving-cost">$111,500</div>
+                </div>
+            </div>
+
+            <div class="calc-footer">
+                <p class="calc-notice" id="duration-notice">
+                    <i class="fas fa-info-circle"></i> Estimated duration: <strong>21 days</strong>. Partner Facilities: <strong>Fortis Escorts / Medanta Medicity</strong>.
+                </p>
+                <a href="#contact" class="btn btn-primary">Lock In This Quote <i class="fas fa-chevron-right"></i></a>
+            </div>
+        </div>
+    </section>
+
+    <!-- ==========================================================================
+       Concierge Flow Timeline Section
+       ========================================================================== -->
+    <section id="journey" class="section-padding">
+        <div class="section-header">
+            <span class="accent-tag">Step-by-Step Care</span>
+            <h2>How It Works</h2>
+            <p>From your initial medical file submission to your departure back home, we handle all administrative, medical, and hospitality logistics.</p>
+        </div>
+
+        <div class="timeline-wrapper">
+            <div class="timeline-line"></div>
+            
+            <!-- Step 1 -->
+            <div class="timeline-item">
+                <div class="timeline-dot"></div>
+                <span class="timeline-step">Step 1</span>
+                <h3>Free Medical Case Review</h3>
+                <p>Submit your medical reports and history. Our panel of senior specialists in India reviews your diagnostic records within 48 hours to confirm treatment feasibility.</p>
+            </div>
+            
+            <!-- Step 2 -->
+            <div class="timeline-item">
+                <div class="timeline-dot"></div>
+                <span class="timeline-step">Step 2</span>
+                <h3>Custom Medical Travel Quote</h3>
+                <p>Receive a transparent treatment and travel itinerary estimate covering surgery costs, hospital stay, flights, luxury recuperation lodging, and visa requirements.</p>
+            </div>
+            
+            <!-- Step 3 -->
+            <div class="timeline-item">
+                <div class="timeline-dot"></div>
+                <span class="timeline-step">Step 3</span>
+                <h3>VIP Concierge Welcome</h3>
+                <p>Touch down in India. Your private companion coordinates your VIP airport pick-up, local SIM card, luxury transport, and check-in to your recuperation accommodation.</p>
+            </div>
+            
+            <!-- Step 4 -->
+            <div class="timeline-item">
+                <div class="timeline-dot"></div>
+                <span class="timeline-step">Step 4</span>
+                <h3>Hospital Admission & Treatment</h3>
+                <p>Meet your lead surgeon for final pre-op diagnostics. Your treatment takes place in leading JCI-accredited sterile operating theatres with 24/7 dedicated support.</p>
+            </div>
+            
+            <!-- Step 5 -->
+            <div class="timeline-item">
+                <div class="timeline-dot"></div>
+                <span class="timeline-step">Step 5</span>
+                <h3>Recuperation & Local Tourism</h3>
+                <p>Recover in tranquility. We coordinate nurse visits, physiotherapy, wellness meals, and guided light tourism excursions to experience the culture and beauty of India.</p>
+            </div>
+            
+            <!-- Step 6 -->
+            <div class="timeline-item">
+                <div class="timeline-dot"></div>
+                <span class="timeline-step">Step 6</span>
+                <h3>Departure & Telehealth Follow-up</h3>
+                <p>Fly back home with certified medical discharge files and prescribed medications. Benefit from post-treatment telehealth check-ins with your surgical team.</p>
+            </div>
+        </div>
+    </section>
+
+    <!-- ==========================================================================
+       Testimonials Carousel Section
+       ========================================================================== -->
+    <section id="testimonials" class="section-padding testimonials">
+        <div class="section-header">
+            <span class="accent-tag">Global Stories</span>
+            <h2>Patient Success Stories</h2>
+            <p>Read about patient journeys and clinical success from individuals who trusted Razaek with their health and travel plans.</p>
+        </div>
+
+        <div class="slider-container glass-card">
+            <div class="testimonial-track" id="testimonial-track">
+                <!-- Testimonial 1 -->
+                <div class="testimonial-slide">
+                    <div class="stars">
+                        <i class="fas fa-star"></i>
+                        <i class="fas fa-star"></i>
+                        <i class="fas fa-star"></i>
+                        <i class="fas fa-star"></i>
+                        <i class="fas fa-star"></i>
+                    </div>
+                    <p class="test-text">"The cost of my hip replacement in New York was estimated at $48,000 without insurance. Through Razaek, I flew to Delhi, had robotic hip surgery under an amazing surgeon, recovered at a five-star resort, and saved over $35,000. The logistics were flawless."</p>
+                    <div class="test-author">
+                        <img src="https://images.unsplash.com/photo-1544005313-94ddf0286df2?auto=format&fit=crop&q=80&w=150" alt="Sarah J. Robinson" class="author-img">
+                        <div class="author-details">
+                            <h5>Sarah Robinson</h5>
+                            <p>New York, USA (Total Hip Replacement)</p>
+                        </div>
+                    </div>
+                </div>
+                <!-- Testimonial 2 -->
+                <div class="testimonial-slide">
+                    <div class="stars">
+                        <i class="fas fa-star"></i>
+                        <i class="fas fa-star"></i>
+                        <i class="fas fa-star"></i>
+                        <i class="fas fa-star"></i>
+                        <i class="fas fa-star"></i>
+                    </div>
+                    <p class="test-text">"My father required a complex heart bypass operation. The waiting list in the UK was months long. Razaek coordinated everything—visas, medical files, airport pickup. Within two weeks, my father was treated successfully at Fortis by top-tier cardiologists."</p>
+                    <div class="test-author">
+                        <img src="https://images.unsplash.com/photo-1507003211169-0a1dd7228f2d?auto=format&fit=crop&q=80&w=150" alt="David M. Patel" class="author-img">
+                        <div class="author-details">
+                            <h5>David Patel</h5>
+                            <p>London, UK (Coronary Artery Bypass)</p>
+                        </div>
+                    </div>
+                </div>
+                <!-- Testimonial 3 -->
+                <div class="testimonial-slide">
+                    <div class="stars">
+                        <i class="fas fa-star"></i>
+                        <i class="fas fa-star"></i>
+                        <i class="fas fa-star"></i>
+                        <i class="fas fa-star"></i>
+                        <i class="fas fa-star"></i>
+                    </div>
+                    <p class="test-text">"We were struggling with fertility for years in Nairobi. The advanced IVF options in India and the personalized support from the Razaek medical coordinator made all the difference. Today we are blessed with healthy twins. Exceptional service!"</p>
+                    <div class="test-author">
+                        <img src="https://images.unsplash.com/photo-1494790108377-be9c29b29330?auto=format&fit=crop&q=80&w=150" alt="Amina O. Mwangi" class="author-img">
+                        <div class="author-details">
+                            <h5>Amina Mwangi</h5>
+                            <p>Nairobi, Kenya (IVF Treatment Cycle)</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            
+            <div class="slider-controls">
+                <button class="slider-btn" id="prev-slide" aria-label="Previous Slide">
+                    <i class="fas fa-chevron-left"></i>
+                </button>
+                <button class="slider-btn" id="next-slide" aria-label="Next Slide">
+                    <i class="fas fa-chevron-right"></i>
+                </button>
+            </div>
+        </div>
+    </section>
+
+    <!-- ==========================================================================
+       Consultation Inquiry Form Section
+       ========================================================================== -->
+    <section id="contact" class="section-padding">
+        <div class="section-header">
+            <span class="accent-tag">Start Your Recovery</span>
+            <h2>Book a Free Consultation</h2>
+            <p>Fill out the step-by-step form below to request a case review and cost quote from India's senior specialists.</p>
+        </div>
+
+        <div class="inquiry-wrapper glass-card">
+            <!-- Step Indicators -->
+            <div class="form-steps">
+                <div class="step-indicator active">1</div>
+                <div class="step-indicator">2</div>
+                <div class="step-indicator">3</div>
+            </div>
+
+            <!-- Multi-step Form -->
+            <form id="inquiry-form">
+                
+                <!-- Step 1: Medical Preference -->
+                <div class="step-content active">
+                    <h3 style="margin-bottom: 25px; text-align: center;">Treatment Details</h3>
+                    <div class="form-grid">
+                        <div class="form-group">
+                            <label for="form-treatment">Procedure / Category</label>
+                            <select id="form-treatment" name="treatmentCategory" class="form-select" required>
+                                <option value="" disabled selected>Select Procedure...</option>
+                                <option value="cardiology">Cardiology / Bypass</option>
+                                <option value="orthopedics">Joints / Orthopedics</option>
+                                <option value="oncology">Oncology (Cancer)</option>
+                                <option value="ivf">IVF & Fertility</option>
+                                <option value="bariatric">Bariatric Surgery</option>
+                                <option value="wellness">Ayurveda / Rejuvenation</option>
+                            </select>
+                        </div>
+                        <div class="form-group">
+                            <label for="form-timeline">Preferred Travel Timeline</label>
+                            <select id="form-timeline" name="travelTimeline" class="form-select" required>
+                                <option value="" disabled selected>Select Timeline...</option>
+                                <option value="immediate">As soon as possible (Within 30 days)</option>
+                                <option value="month">In 1-2 months</option>
+                                <option value="quarter">In 3-6 months</option>
+                                <option value="flexible">Flexible / Planning phase</option>
+                            </select>
+                        </div>
+                        <div class="form-group full-width">
+                            <label for="form-medical-history">Summary of medical concerns & symptoms</label>
+                            <textarea id="form-medical-history" name="medicalHistory" class="form-select textarea-input" placeholder="Please describe your symptoms, diagnoses, or specific implants/treatments requested..." required></textarea>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Step 2: Patient Information -->
+                <div class="step-content">
+                    <h3 style="margin-bottom: 25px; text-align: center;">Contact & Patient Info</h3>
+                    <div class="form-grid">
+                        <div class="form-group">
+                            <label for="form-name">Patient Full Name</label>
+                            <input type="text" id="form-name" name="patientName" class="form-input" placeholder="e.g. John Doe" required>
+                        </div>
+                        <div class="form-group">
+                            <label for="form-email">Email Address</label>
+                            <input type="email" id="form-email" name="patientEmail" class="form-input" placeholder="e.g. johndoe@gmail.com" required>
+                        </div>
+                        <div class="form-group">
+                            <label for="form-phone">Phone Number (with Country Code)</label>
+                            <input type="tel" id="form-phone" name="patientPhone" class="form-input" placeholder="e.g. +1 555-0199" required>
+                        </div>
+                        <div class="form-group">
+                            <label for="form-country">Country of Residence</label>
+                            <input type="text" id="form-country" name="patientCountry" class="form-input" placeholder="e.g. United States" required>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Step 3: Supporting Details -->
+                <div class="step-content">
+                    <h3 style="margin-bottom: 25px; text-align: center;">Additional Support</h3>
+                    <div class="form-grid">
+                        <div class="form-group">
+                            <label for="form-passport">Do you hold a valid international passport?</label>
+                            <select id="form-passport" name="passportStatus" class="form-select" required>
+                                <option value="" disabled selected>Choose option...</option>
+                                <option value="yes">Yes, valid for 6+ months</option>
+                                <option value="renewing">In process of renewal</option>
+                                <option value="no">No passport currently</option>
+                            </select>
+                        </div>
+                        <div class="form-group">
+                            <label for="form-visa-help">Do you require Medical Visa documentation assistance?</label>
+                            <select id="form-visa-help" name="visaAssistance" class="form-select" required>
+                                <option value="" disabled selected>Choose option...</option>
+                                <option value="yes">Yes, please assist me</option>
+                                <option value="no">No, I can organize this myself</option>
+                            </select>
+                        </div>
+                        <div class="form-group full-width">
+                            <label for="form-notes">Additional requests or special logistics</label>
+                            <textarea id="form-notes" name="additionalNotes" class="form-select textarea-input" placeholder="E.g., wheelchair access, dietary restrictions, preferred flights, double-bed hotel room..."></textarea>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Step Navigation Buttons -->
+                <div class="form-buttons-nav">
+                    <button type="button" id="form-prev-btn" class="btn btn-secondary">
+                        <i class="fas fa-arrow-left"></i> Previous Step
+                    </button>
+                    <button type="button" id="form-next-btn" class="btn btn-primary">
+                        Next Step <i class="fas fa-arrow-right"></i>
+                    </button>
+                </div>
+            </form>
+
+            <!-- Success State -->
+            <div id="form-success" class="form-success-message">
+                <i class="far fa-check-circle"></i>
+                <h3>Inquiry Submitted Successfully!</h3>
+                <p>Thank you for submitting your case records. A dedicated medical care coordinator will contact you via email and phone within 24 hours to organize your clinical consultation plan.</p>
+            </div>
+        </div>
+    </section>
+
+    <!-- ==========================================================================
+       Footer Section
+       ========================================================================== -->
+    <footer class="footer">
+        <div class="footer-grid">
+            <div class="footer-brand">
+                <a href="#home" class="logo">
+                    <div class="logo-icon">
+                        <i class="fas fa-heartbeat"></i>
+                    </div>
+                    Razaek <span>Medical</span>
+                </a>
+                <p>Simplifying medical travel logistics to provide trusted clinical outcomes, VIP concierge assistance, and affordable premium healthcare.</p>
+                <div class="social-links">
+                    <a href="#" class="social-link" aria-label="Facebook"><i class="fab fa-facebook-f"></i></a>
+                    <a href="#" class="social-link" aria-label="Twitter"><i class="fab fa-twitter"></i></a>
+                    <a href="#" class="social-link" aria-label="LinkedIn"><i class="fab fa-linkedin-in"></i></a>
+                    <a href="#" class="social-link" aria-label="Instagram"><i class="fab fa-instagram"></i></a>
+                </div>
+            </div>
+            
+            <div class="footer-col">
+                <h4>Treatments</h4>
+                <ul>
+                    <li><a href="#treatments">Cardiology</a></li>
+                    <li><a href="#treatments">Orthopedics</a></li>
+                    <li><a href="#treatments">Oncology Care</a></li>
+                    <li><a href="#treatments">IVF & Fertility</a></li>
+                    <li><a href="#treatments">Ayurveda Wellness</a></li>
+                </ul>
+            </div>
+
+            <div class="footer-col">
+                <h4>Platform</h4>
+                <ul>
+                    <li><a href="#journey">How it Works</a></li>
+                    <li><a href="#calculator">Savings Estimator</a></li>
+                    <li><a href="#testimonials">Patient Reviews</a></li>
+                    <li><a href="#contact">Consultation Form</a></li>
+                    <li><a href="#home">Back to Top</a></li>
+                </ul>
+            </div>
+
+            <div class="footer-col">
+                <h4>Contact Info</h4>
+                <ul style="color: var(--text-muted-light);">
+                    <li style="display: flex; gap: 10px; align-items: center;"><i class="fas fa-envelope" style="color: var(--secondary-light);"></i> support@razaek.com</li>
+                    <li style="display: flex; gap: 10px; align-items: center;"><i class="fas fa-phone-volume" style="color: var(--secondary-light);"></i> +91 11-4500-6677</li>
+                    <li style="display: flex; gap: 10px; align-items: center;"><i class="fas fa-map-location-dot" style="color: var(--secondary-light);"></i> New Delhi, India</li>
+                </ul>
+            </div>
+        </div>
+
+        <div class="footer-bottom">
+            <p>&copy; 2026 Razaek Medical Tourism Ltd. All rights reserved.</p>
+            <div style="display: flex; gap: 20px;">
+                <a href="#">Privacy Policy</a>
+                <a href="#">Terms of Service</a>
+                <a href="#">Disclaimer</a>
+            </div>
+        </div>
+    </footer>
+
+    <!-- Script File -->
+    <script src="script.js"></script>
+</body>
+</html>

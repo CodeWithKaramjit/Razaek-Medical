@@ -1,0 +1,23 @@
+{
+  "name": "razaek-monorepo",
+  "version": "1.0.0",
+  "description": "Razaek Medical Tourism Platform Monorepo",
+  "private": true,
+  "workspaces": [
+    "razaek-backend",
+    "razaek-admin",
+    "razaek-mobile"
+  ],
+  "scripts": {
+    "backend": "npm run dev --prefix razaek-backend",
+    "admin": "npm run dev --prefix razaek-admin",
+    "mobile": "npm run start --prefix razaek-mobile",
+    "mobile:android": "npm run android --prefix razaek-mobile",
+    "mobile:ios": "npm run ios --prefix razaek-mobile",
+    "dev": "concurrently \"npm run backend\" \"npm run admin\" \"npm run mobile\"",
+    "install-all": "npm install --prefix razaek-backend && npm install --prefix razaek-admin"
+  },
+  "devDependencies": {
+    "concurrently": "^8.2.2"
+  }
+}

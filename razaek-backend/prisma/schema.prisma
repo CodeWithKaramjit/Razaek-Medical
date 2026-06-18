@@ -1,0 +1,226 @@
+// Generator & Datasource
+generator client {
+  provider = "prisma-client-js"
+}
+
+datasource db {
+  provider  = "postgresql"
+  url       = env("DATABASE_URL")
+  directUrl = env("DIRECT_URL")
+}
+
+// ─── Enums ────────────────────────────────────────────────────
+
+enum UserRole {
+  PATIENT
+  ADMIN
+  COORDINATOR
+  SUPERADMIN
+}
+
+enum PackageTier {
+  BASIC
+  STANDARD
+  PREMIUM
+  LUXURY
+}
+
+enum BookingStatus {
+  PENDING
+  CONFIRMED
+  IN_PROGRESS
+  COMPLETED
+  CANCELLED
+}
+
+// ─── Models ───────────────────────────────────────────────────
+
+model User {
+  id           String   @id @default(cuid())
+  name         String
+  email        String   @unique
+  phone        String?
+  country      String?
+  passportNo   String?
+  passwordHash String
+  role         UserRole @default(PATIENT)
+  isActive     Boolean  @default(true)
+  createdAt    DateTime @default(now())
+  updatedAt    DateTime @updatedAt
+
+  bookings              Booking[]               @relation("PatientBookings")
+  reports               MedicalReport[]
+  notifications         Notification[]
+  coordinatorAssignments CoordinatorAssignment[] @relation("CoordinatorAssignments")
+
+  @@map("users")
+}
+
+model Specialty {
+  id          String   @id @default(cuid())
+  name        String   @unique
+  icon        String?
+  description String?
+  imageUrl    String?
+  isActive    Boolean  @default(true)
+  createdAt   DateTime @default(now())
+
+  packages           Package[]
+  hospitalSpecialties HospitalSpecialty[]
+  doctors            Doctor[]
+
+  @@map("specialties")
+}
+
+model Hospital {
+  id             String   @id @default(cuid())
+  name           String
+  city           String
+  state          String
+  address        String?
+  rating         Float    @default(0)
+  accreditations String[]
+  imageUrls      String[]
+  description    String?
+  phone          String?
+  email          String?
+  websiteUrl     String?
+  isActive       Boolean  @default(true)
+  createdAt      DateTime @default(now())
+  updatedAt      DateTime @updatedAt
+
+  specialties HospitalSpecialty[]
+  doctors     Doctor[]
+  bookings    Booking[]
+
+  @@map("hospitals")
+}
+
+model HospitalSpecialty {
+  hospitalId  String
+  specialtyId String
+
+  hospital  Hospital  @relation(fields: [hospitalId], references: [id], onDelete: Cascade)
+  specialty Specialty @relation(fields: [specialtyId], references: [id], onDelete: Cascade)
+
+  @@id([hospitalId, specialtyId])
+  @@map("hospital_specialties")
+}
+
+model Doctor {
+  id             String   @id @default(cuid())
+  name           String
+  hospitalId     String
+  specialtyId    String
+  experience     Int?
+  qualifications String[]
+  bio            String?
+  imageUrl       String?
+  isActive       Boolean  @default(true)
+  createdAt      DateTime @default(now())
+  updatedAt      DateTime @updatedAt
+
+  hospital  Hospital  @relation(fields: [hospitalId], references: [id])
+  specialty Specialty @relation(fields: [specialtyId], references: [id])
+  bookings  Booking[]
+
+  @@map("doctors")
+}
+
+model Package {
+  id          String      @id @default(cuid())
+  name        String
+  tier        PackageTier
+  specialtyId String
+  priceUSD    Float
+  priceINR    Float
+  duration    String
+  description String?
+  isActive    Boolean     @default(true)
+  createdAt   DateTime    @default(now())
+  updatedAt   DateTime    @updatedAt
+
+  specialty Specialty      @relation(fields: [specialtyId], references: [id])
+  features  PackageFeature[]
+  bookings  Booking[]
+
+  @@map("packages")
+}
+
+model PackageFeature {
+  id        String  @id @default(cuid())
+  packageId String
+  feature   String
+  included  Boolean @default(true)
+
+  package Package @relation(fields: [packageId], references: [id], onDelete: Cascade)
+
+  @@map("package_features")
+}
+
+model Booking {
+  id             String        @id @default(cuid())
+  patientId      String
+  packageId      String
+  hospitalId     String
+  doctorId       String
+  status         BookingStatus @default(PENDING)
+  travelDateFrom DateTime?
+  travelDateTo   DateTime?
+  notes          String?
+  totalAmountUSD Float?
+  createdAt      DateTime      @default(now())
+  updatedAt      DateTime      @updatedAt
+
+  patient               User                   @relation("PatientBookings", fields: [patientId], references: [id])
+  package               Package                @relation(fields: [packageId], references: [id])
+  hospital              Hospital               @relation(fields: [hospitalId], references: [id])
+  doctor                Doctor                 @relation(fields: [doctorId], references: [id])
+  reports               MedicalReport[]
+  coordinatorAssignment CoordinatorAssignment?
+  notifications         Notification[]
+
+  @@map("bookings")
+}
+
+model MedicalReport {
+  id         String   @id @default(cuid())
+  patientId  String
+  bookingId  String
+  fileName   String
+  fileUrl    String
+  fileType   String?
+  uploadedAt DateTime @default(now())
+
+  patient User    @relation(fields: [patientId], references: [id])
+  booking Booking @relation(fields: [bookingId], references: [id], onDelete: Cascade)
+
+  @@map("medical_reports")
+}
+
+model CoordinatorAssignment {
+  id            String   @id @default(cuid())
+  bookingId     String   @unique
+  coordinatorId String
+  assignedAt    DateTime @default(now())
+
+  booking     Booking @relation(fields: [bookingId], references: [id], onDelete: Cascade)
+  coordinator User    @relation("CoordinatorAssignments", fields: [coordinatorId], references: [id])
+
+  @@map("coordinator_assignments")
+}
+
+model Notification {
+  id        String   @id @default(cuid())
+  userId    String
+  bookingId String?
+  title     String
+  body      String
+  isRead    Boolean  @default(false)
+  createdAt DateTime @default(now())
+
+  user    User     @relation(fields: [userId], references: [id], onDelete: Cascade)
+  booking Booking? @relation(fields: [bookingId], references: [id], onDelete: SetNull)
+
+  @@map("notifications")
+}
