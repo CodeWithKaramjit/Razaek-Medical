@@ -3,58 +3,59 @@
    ========================================================================== */
 
 /* Google Fonts Import */
-@import url('https://fonts.googleapis.com/css2?family=Outfit:wght@300;400;500;600;700;800&family=Playfair+Display:ital,wght@0,400;0,600;0,700;1,400&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800&family=Source+Serif+4:ital,opsz,wght@0,8..60,300..900;1,8..60,300..900&display=swap');
 
 :root {
-    /* Brand Colors (Teal & Gold Theme) */
-    --primary-h: 172;
-    --primary-s: 80%;
-    --primary-l: 24%;
+    /* Brand Colors (Clinical Excellence Theme) */
+    --primary-h: 212;
+    --primary-s: 100%;
+    --primary-l: 14%;
     
-    --primary: hsl(var(--primary-h), var(--primary-s), var(--primary-l));
-    --primary-light: hsl(var(--primary-h), var(--primary-s), calc(var(--primary-l) + 12%));
-    --primary-dark: hsl(var(--primary-h), var(--primary-s), calc(var(--primary-l) - 8%));
-    --primary-rgb: 12, 110, 98;
+    --primary: #002045;
+    --primary-light: #1a365d;
+    --primary-dark: #001024;
+    --primary-rgb: 0, 32, 69;
     
-    --secondary-h: 40;
-    --secondary-s: 55%;
-    --secondary-l: 56%;
+    --secondary-h: 181;
+    --secondary-s: 70%;
+    --secondary-l: 25%;
     
-    --secondary: hsl(var(--secondary-h), var(--secondary-s), var(--secondary-l));
-    --secondary-light: hsl(var(--secondary-h), var(--secondary-s), calc(var(--secondary-l) + 10%));
-    --secondary-dark: hsl(var(--secondary-h), var(--secondary-s), calc(var(--secondary-l) - 10%));
-    --secondary-rgb: 197, 160, 89;
+    --secondary: #13696a;
+    --secondary-light: #2c7a7b; /* Serene Teal light accent */
+    --secondary-dark: #0d4b4c;
+    --secondary-rgb: 19, 105, 106;
 
-    /* Base Neutrals (Dark Theme by default for premium feel) */
-    --bg-dark: #0a0f0d;
-    --bg-dark-card: rgba(16, 26, 23, 0.7);
-    --bg-dark-nav: rgba(10, 15, 13, 0.85);
-    --text-light: #f3f5f4;
-    --text-muted-light: #a3b3ae;
+    /* Base Neutrals (Clinical Excellence values) */
+    --bg-dark: #0a0f12;
+    --bg-dark-card: rgba(24, 28, 30, 0.7);
+    --bg-dark-nav: rgba(10, 15, 18, 0.85);
+    --text-light: #f7fafc;
+    --text-muted-light: #989fa6;
     --border-dark: rgba(255, 255, 255, 0.08);
-    --glow-dark: rgba(12, 110, 98, 0.25);
+    --glow-dark: rgba(19, 105, 106, 0.25);
 
-    /* Light Theme Alternates (Dynamic switching or hybrid sections) */
-    --bg-light: #f4f7f6;
-    --bg-light-card: rgba(255, 255, 255, 0.85);
-    --bg-light-nav: rgba(244, 247, 246, 0.9);
-    --text-dark: #16221f;
-    --text-muted-dark: #566963;
-    --border-light: rgba(12, 110, 98, 0.12);
-    --glow-light: rgba(12, 110, 98, 0.1);
+    /* Light Theme Alternates */
+    --bg-light: #f7fafc;
+    --bg-light-card: #ffffff;
+    --bg-light-nav: rgba(247, 250, 252, 0.9);
+    --text-dark: #181c1e;
+    --text-muted-dark: #43474e;
+    --border-light: #ebeef0;
+    --glow-light: rgba(19, 105, 106, 0.1);
 
     /* Font Families */
-    --font-heading: 'Playfair Display', Georgia, serif;
-    --font-body: 'Outfit', sans-serif;
+    --font-heading: 'Source Serif 4', Georgia, serif;
+    --font-body: 'Inter', sans-serif;
 
     /* Transitions & Shadows */
     --transition-fast: 0.2s cubic-bezier(0.4, 0, 0.2, 1);
     --transition-normal: 0.4s cubic-bezier(0.4, 0, 0.2, 1);
     --transition-slow: 0.6s cubic-bezier(0.4, 0, 0.2, 1);
-    --shadow-premium: 0 20px 40px -15px rgba(0, 0, 0, 0.5);
-    --radius-sm: 8px;
-    --radius-md: 16px;
-    --radius-lg: 24px;
+    --shadow-premium: 0 12px 24px -4px rgba(0, 32, 69, 0.04), 0 4px 12px -2px rgba(0, 32, 69, 0.04);
+    --radius-sm: 0.25rem; /* 4px */
+    --radius-md: 0.5rem;  /* 8px */
+    --radius-lg: 0.75rem; /* 12px */
+    --radius-xl: 1rem;    /* 16px */
 }
 
 /* Base resets & layout */
@@ -149,8 +150,8 @@ body.light-theme .section-header p {
 .accent-tag {
     display: inline-block;
     padding: 6px 16px;
-    background: rgba(197, 160, 89, 0.15);
-    border: 1px solid rgba(197, 160, 89, 0.3);
+    background: rgba(var(--secondary-rgb), 0.15);
+    border: 1px solid rgba(var(--secondary-rgb), 0.3);
     color: var(--secondary-light);
     border-radius: 50px;
     font-size: 0.85rem;
@@ -161,8 +162,8 @@ body.light-theme .section-header p {
 }
 
 body.light-theme .accent-tag {
-    background: rgba(12, 110, 98, 0.08);
-    border: 1px solid rgba(12, 110, 98, 0.2);
+    background: rgba(var(--primary-rgb), 0.08);
+    border: 1px solid rgba(var(--primary-rgb), 0.2);
     color: var(--primary);
 }
 
@@ -186,12 +187,12 @@ body.light-theme .accent-tag {
 .btn-primary {
     background: linear-gradient(135deg, var(--primary-light), var(--primary));
     color: #fff;
-    box-shadow: 0 8px 20px -6px rgba(12, 110, 98, 0.4);
+    box-shadow: 0 8px 20px -6px rgba(var(--primary-rgb), 0.4);
 }
 
 .btn-primary:hover {
     transform: translateY(-2px);
-    box-shadow: 0 12px 24px -4px rgba(12, 110, 98, 0.6);
+    box-shadow: 0 12px 24px -4px rgba(var(--primary-rgb), 0.6);
     background: linear-gradient(135deg, var(--primary), var(--primary-dark));
 }
 
@@ -207,12 +208,12 @@ body.light-theme .btn-secondary {
 }
 
 .btn-secondary:hover {
-    background: rgba(197, 160, 89, 0.1);
+    background: rgba(var(--secondary-rgb), 0.1);
     transform: translateY(-2px);
 }
 
 body.light-theme .btn-secondary:hover {
-    background: rgba(12, 110, 98, 0.05);
+    background: rgba(var(--primary-rgb), 0.05);
 }
 
 /* Glassmorphism Card base */
@@ -229,17 +230,17 @@ body.light-theme .btn-secondary:hover {
 body.light-theme .glass-card {
     background: var(--bg-light-card);
     border: 1px solid var(--border-light);
-    box-shadow: 0 20px 40px -15px rgba(12, 110, 98, 0.08);
+    box-shadow: 0 20px 40px -15px rgba(var(--primary-rgb), 0.08);
 }
 
 .glass-card:hover {
     transform: translateY(-6px);
-    border-color: rgba(197, 160, 89, 0.3);
+    border-color: rgba(var(--secondary-rgb), 0.3);
     box-shadow: 0 30px 50px -10px var(--glow-dark);
 }
 
 body.light-theme .glass-card:hover {
-    border-color: rgba(12, 110, 98, 0.25);
+    border-color: rgba(var(--primary-rgb), 0.25);
     box-shadow: 0 30px 50px -10px var(--glow-light);
 }
 
@@ -272,7 +273,7 @@ body.light-theme .glass-card:hover {
 body.light-theme .navbar.scrolled {
     background: var(--bg-light-nav);
     border-bottom: 1px solid var(--border-light);
-    box-shadow: 0 4px 30px rgba(12, 110, 98, 0.03);
+    box-shadow: 0 4px 30px rgba(var(--primary-rgb), 0.03);
 }
 
 .logo {
@@ -458,13 +459,13 @@ body.light-theme .burger div {
     display: flex;
     align-items: center;
     position: relative;
-    background: radial-gradient(circle at 10% 20%, rgba(12, 110, 98, 0.15) 0%, transparent 45%),
-                radial-gradient(circle at 90% 80%, rgba(197, 160, 89, 0.08) 0%, transparent 50%);
+    background: radial-gradient(circle at 10% 20%, rgba(var(--primary-rgb), 0.15) 0%, transparent 45%),
+                radial-gradient(circle at 90% 80%, rgba(var(--secondary-rgb), 0.08) 0%, transparent 50%);
 }
 
 body.light-theme .hero {
-    background: radial-gradient(circle at 10% 20%, rgba(12, 110, 98, 0.06) 0%, transparent 45%),
-                radial-gradient(circle at 90% 80%, rgba(197, 160, 89, 0.04) 0%, transparent 50%);
+    background: radial-gradient(circle at 10% 20%, rgba(var(--primary-rgb), 0.06) 0%, transparent 45%),
+                radial-gradient(circle at 90% 80%, rgba(var(--secondary-rgb), 0.04) 0%, transparent 50%);
 }
 
 .hero-container {
@@ -596,7 +597,7 @@ body.light-theme .trust-lbl {
 
 body.light-theme .hero-image {
     border-color: var(--border-light);
-    box-shadow: 0 30px 60px -15px rgba(12, 110, 98, 0.15);
+    box-shadow: 0 30px 60px -15px rgba(var(--primary-rgb), 0.15);
 }
 
 .hero-image img {
@@ -670,8 +671,8 @@ body.light-theme .badge-text p {
 .package-icon {
     width: 60px;
     height: 60px;
-    background: rgba(12, 110, 98, 0.15);
-    border: 1px solid rgba(12, 110, 98, 0.3);
+    background: rgba(var(--primary-rgb), 0.15);
+    border: 1px solid rgba(var(--primary-rgb), 0.3);
     color: var(--primary-light);
     border-radius: var(--radius-sm);
     display: flex;
@@ -683,8 +684,8 @@ body.light-theme .badge-text p {
 }
 
 body.light-theme .package-icon {
-    background: rgba(12, 110, 98, 0.08);
-    border-color: rgba(12, 110, 98, 0.15);
+    background: rgba(var(--primary-rgb), 0.08);
+    border-color: rgba(var(--primary-rgb), 0.15);
     color: var(--primary);
 }
 
@@ -770,7 +771,7 @@ body.light-theme .package-link {
 
 .estimator {
     position: relative;
-    background: radial-gradient(circle at 50% 10%, rgba(197, 160, 89, 0.05) 0%, transparent 60%);
+    background: radial-gradient(circle at 50% 10%, rgba(var(--secondary-rgb), 0.05) 0%, transparent 60%);
 }
 
 .calculator-wrapper {
@@ -831,19 +832,19 @@ body.light-theme .form-group label {
 }
 
 body.light-theme .form-select, body.light-theme .form-input {
-    background: rgba(12, 110, 98, 0.03);
+    background: rgba(var(--primary-rgb), 0.03);
     border: 1px solid var(--border-light);
     color: var(--text-dark);
 }
 
 .form-select:focus, .form-input:focus {
     border-color: var(--secondary);
-    box-shadow: 0 0 10px rgba(197, 160, 89, 0.15);
+    box-shadow: 0 0 10px rgba(var(--secondary-rgb), 0.15);
 }
 
 body.light-theme .form-select:focus, body.light-theme .form-input:focus {
     border-color: var(--primary);
-    box-shadow: 0 0 10px rgba(12, 110, 98, 0.1);
+    box-shadow: 0 0 10px rgba(var(--primary-rgb), 0.1);
 }
 
 /* Cost Grid Display */
@@ -868,13 +869,13 @@ body.light-theme .form-select:focus, body.light-theme .form-input:focus {
 }
 
 .cost-card.saving {
-    background: linear-gradient(135deg, rgba(12, 110, 98, 0.25), rgba(12, 110, 98, 0.05));
-    border: 1px solid rgba(12, 110, 98, 0.4);
+    background: linear-gradient(135deg, rgba(var(--primary-rgb), 0.25), rgba(var(--primary-rgb), 0.05));
+    border: 1px solid rgba(var(--primary-rgb), 0.4);
 }
 
 body.light-theme .cost-card.saving {
-    background: linear-gradient(135deg, rgba(12, 110, 98, 0.08), rgba(12, 110, 98, 0.02));
-    border: 1px solid rgba(12, 110, 98, 0.2);
+    background: linear-gradient(135deg, rgba(var(--primary-rgb), 0.08), rgba(var(--primary-rgb), 0.02));
+    border: 1px solid rgba(var(--primary-rgb), 0.2);
 }
 
 .cost-card h4 {
@@ -1075,7 +1076,7 @@ body.light-theme .timeline-item p {
    ========================================================================== */
 
 .testimonials {
-    background: radial-gradient(circle at 90% 10%, rgba(12, 110, 98, 0.06) 0%, transparent 50%);
+    background: radial-gradient(circle at 90% 10%, rgba(var(--primary-rgb), 0.06) 0%, transparent 50%);
 }
 
 .slider-container {
@@ -1401,7 +1402,7 @@ body.light-theme .footer-brand p {
 }
 
 body.light-theme .social-link {
-    background: rgba(12, 110, 98, 0.05);
+    background: rgba(var(--primary-rgb), 0.05);
     color: var(--text-muted-dark);
 }
 
